@@ -7,8 +7,8 @@ def merge_sort(x):
     if len(x) < 2:
         return x
     mid = int(len(x) / 2)
-    y = msort3(x[:mid])
-    z = msort3(x[mid:])
+    y = merge_sort(x[:mid])
+    z = merge_sort(x[mid:])
     i = 0
     j = 0
     while i < len(y) and j < len(z):
